@@ -1,10 +1,13 @@
-package ru.surfstudio.android.koin_excercise.feature
+package ru.surfstudio.android.koin_excercise.main
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import ru.surfstudio.android.koin_excercise.KoinRepository
+import javax.inject.Inject
 
-class MainViewModel(
+@HiltViewModel
+class MainViewModel @Inject constructor(
     private val repository: KoinRepository,
     private val route: MainRoute
 ) : ViewModel() {
@@ -16,6 +19,5 @@ class MainViewModel(
     fun doSomething() {
         Log.d("Main", "do something")
     }
-
 
 }
