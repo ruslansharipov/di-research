@@ -1,8 +1,8 @@
 apply from: '../commonModule.gradle'
-apply from: '../commonKaptModule.gradle'
 
 dependencies {
 
+    api di.koin
     api material.material
     api androidX.fragmentKtx
     api androidX.annotation

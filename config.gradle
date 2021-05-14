@@ -74,7 +74,7 @@ ext {
             huaweiLocationVersion         : '5.0.4.300',                 //https://t.ly/T716
             googlePayVersion              : '18.1.2',
 
-            hiltVersion : '2.35',
+            koinVersion : '3.0.1',
             fragmentKtxVersion: '1.3.3',
             materialVersion: "1.3.0"
     ]
@@ -110,8 +110,7 @@ ext {
     ]
 
     di = [
-            dagger    : "com.google.dagger:hilt-android:${versions.hiltVersion}",
-            daggerKapt: "com.google.dagger:hilt-compiler:${versions.hiltVersion}",
+            koin: "io.insert-koin:koin-android:${versions.koinVersion}",
             javaInject: "javax.inject:javax.inject:${versions.javaInjectVersion}"
     ]
 

@@ -1,19 +1,13 @@
 package ru.surfstudio.android.koin_excercise.f_screen
 
 import androidx.lifecycle.SavedStateHandle
-import dagger.Module
-import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ViewModelComponent
+import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.dsl.module
 
-@Module
-@InstallIn(ViewModelComponent::class)
-object FeatureScreenModule {
-
-    @Provides
-    fun provideRouteService(
-        savedStateHandle: SavedStateHandle
-    ): FeatureRoute {
-        return FeatureRoute(savedStateHandle)
+val featureScreenModule = module {
+    viewModel {
+        val savedStateHandle = get<SavedStateHandle>()
+        val route = FeatureRoute(savedStateHandle)
+        FeatureViewModel(route)
     }
 }
