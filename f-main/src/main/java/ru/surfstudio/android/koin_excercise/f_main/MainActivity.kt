@@ -1,12 +1,10 @@
-package ru.surfstudio.android.koin_excercise.main
+package ru.surfstudio.android.koin_excercise.f_main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import dagger.hilt.android.AndroidEntryPoint
-import ru.surfstudio.android.koin_excercise.R
-import ru.surfstudio.android.koin_excercise.feature.FeatureActivity
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -15,9 +13,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         viewModel.doSomething()
-        val intent = Intent(this, FeatureActivity::class.java)
+
+        val clazz = Class.forName("ru.surfstudio.android.koin_excercise.f_screen.FeatureActivity")
+        val intent = Intent(this, clazz)
         intent.putExtra("args", "super cool args")
         startActivity(intent)
     }

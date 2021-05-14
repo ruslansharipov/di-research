@@ -1,4 +1,4 @@
-package ru.surfstudio.android.koin_excercise
+package ru.surfstudio.android.koin_excercise.i_repository
 
 import javax.inject.Inject
 import javax.inject.Singleton

@@ -1,2 +1,5 @@
+include ':i-repository'
+include ':f-screen'
+include ':f-main'
 include ':app'
 rootProject.name = "koin-excercise"

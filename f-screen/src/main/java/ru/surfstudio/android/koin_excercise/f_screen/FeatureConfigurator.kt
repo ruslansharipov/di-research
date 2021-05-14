@@ -1,4 +1,4 @@
-package ru.surfstudio.android.koin_excercise.main
+package ru.surfstudio.android.koin_excercise.f_screen
 
 import androidx.lifecycle.SavedStateHandle
 import dagger.Module
@@ -8,12 +8,12 @@ import dagger.hilt.android.components.ViewModelComponent
 
 @Module
 @InstallIn(ViewModelComponent::class)
-object MainScreenModule {
+object FeatureScreenModule {
 
     @Provides
-    fun provideAnalyticsService(
+    fun provideRouteService(
         savedStateHandle: SavedStateHandle
-    ): MainRoute {
-        return MainRoute(savedStateHandle)
+    ): FeatureRoute {
+        return FeatureRoute(savedStateHandle)
     }
 }

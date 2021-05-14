@@ -1,4 +1,4 @@
-package ru.surfstudio.android.koin_excercise.main
+package ru.surfstudio.android.koin_excercise.f_main
 
 import androidx.lifecycle.SavedStateHandle
 

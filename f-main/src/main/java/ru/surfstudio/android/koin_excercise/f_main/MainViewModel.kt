@@ -1,9 +1,9 @@
-package ru.surfstudio.android.koin_excercise.main
+package ru.surfstudio.android.koin_excercise.f_main
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
-import ru.surfstudio.android.koin_excercise.KoinRepository
+import ru.surfstudio.android.koin_excercise.i_repository.KoinRepository
 import javax.inject.Inject
 
 @HiltViewModel

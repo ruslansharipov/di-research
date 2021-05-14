@@ -1,0 +1,11 @@
+apply from: '../commonModule.gradle'
+apply from: '../commonKaptModule.gradle'
+
+dependencies {
+
+    api material.material
+    api androidX.fragmentKtx
+    api androidX.annotation
+    api androidX.appcompat
+    api androidX.lifecycleKtx
+}
