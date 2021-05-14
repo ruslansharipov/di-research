@@ -13,11 +13,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        viewModel.doSomething()
+        if (savedInstanceState == null) {
 
-        val clazz = Class.forName("ru.surfstudio.android.koin_excercise.f_screen.FeatureActivity")
-        val intent = Intent(this, clazz)
-        intent.putExtra("args", "super cool args")
-        startActivity(intent)
+            viewModel.doSomething()
+
+            val clazz = Class.forName("ru.surfstudio.android.koin_excercise.f_screen.FeatureActivity")
+            val intent = Intent(this, clazz)
+            intent.putExtra("args", "super cool args")
+            startActivity(intent)
+        }
     }
 }
